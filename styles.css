@@ -1,0 +1,181 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,900,700italic,700,600italic,600,400italic);
+
+* {
+  font-family: 'Titillium Web', cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header {
+  height: 120px;
+}
+
+.content {
+  position: relative;
+  padding: 60px 0;
+  margin: 50px auto 0 auto;
+  width: 80%;
+  color: #f0f0f0;
+}
+
+.inside {
+  max-width: 80%;
+  margin: auto;
+}
+
+.picture {
+  float: left;
+  padding: 24px 0;
+  border-right: 20px solid transparent;
+}
+
+.picture img {
+  border: 1px solid #00000030;
+  border-radius: 25px;
+  height: 50px;
+  width: auto;
+}
+
+.navigation {
+  float: right;
+  display: flex;
+  align-items: center;
+  min-height: 90px;
+  height: auto;
+}
+
+.navigation a {
+  margin-left: 10px;
+  color: #ddd;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: .3s linear;
+}
+
+.navigation a:hover {
+  background: #fff;
+  color: #932e3e;
+  transform: scale(1.1);
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.navigation i {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.menu-bars {
+  position: fixed;
+  float: right;
+  right: 10%;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  height: 90px;
+  line-height: 90px !important;
+  color: #fff;
+  font-size: 26px;
+  display: none !important;
+  cursor: pointer;
+  z-index: 30;
+}
+
+#navbar {
+  overflow: hidden;
+  padding: 12px 12px;
+  transition: .4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 120px;
+  background-size: cover;
+  background: #000;
+  z-index: 99;
+}
+
+#navbar #logo {
+  transition: .4s;
+}
+
+.progress-container {
+  position: fixed;
+  top: 90px;
+  width: 100%;
+  height: 8px;
+  background: #fff;
+  transition: .4s;
+  z-index: 30;
+}
+
+.progress-bar {
+  float: left;
+  width: 0%;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+  transition: width .6s ease;
+  background-color: #932e3e !important;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #932e3e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media screen and (max-width: 1200px) {
+  .menu-bars {
+    display: block !important;
+  }
+
+  #navbar {
+    background-size: auto;
+  }
+
+  .navigation {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: none;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  .navigation a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navigation.active {
+    display: block;
+    background: #000;
+    background-size: cover;
+    border-top: 8px solid #932e3e;
+    border-bottom: 8px solid #932e3e;
+  }
+}
